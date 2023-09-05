@@ -1,0 +1,41 @@
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+  }
+
+.apexcharts-canvas {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+
+  .apexcharts-title {
+    font-size: 20px;
+    color: #333;
+  }
+  
+ 
+  .apexcharts-xaxis-label {
+    font-size: 12px;
+    color: #888;
+  }
+  
+
+  .apexcharts-yaxis-label {
+    font-size: 12px;
+    color: #888;
+  }
+  .btn-success {
+    background-color: #28a745; /* Color de fondo cuando está encendido */
+    color: white;
+    transition: background-color 0.10s ease;
+  }
+  
+  .btn-danger {
+    background-color: #dc3545; /* Color de fondo cuando está apagado */
+    color: white;
+    transition: background-color 0.10s ease;
+  }
+  

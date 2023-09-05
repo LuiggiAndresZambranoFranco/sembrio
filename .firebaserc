@@ -1,0 +1,16 @@
+{
+  "projects": {
+    "default": "apexcharts-graphics",
+    "staging": "sembrio-3243f"
+  },
+  "targets": {
+    "apexcharts-graphics": {
+      "hosting": {
+        "app-luiggi": [
+          "apexcharts-graphics"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

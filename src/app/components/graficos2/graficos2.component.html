@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Pagina principal de odontológia" />
+    <title>Pagina principal</title>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../main/">Inicio</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../register/"
+                >Agregar trabajadores</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="../galeria/">Galeria</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div id="chart">
+      <header class="py-5">
+        <div class="container px-lg-5">
+          <div class="p-4 p-lg-5 bg-light rounded-3 text-center">
+            <div class="m-4 m-lg-5">
+              <h1 class="display-5 fw-bold">
+                ¡Bienvenido a la revisión de graficos!
+              </h1>
+              <p class="fs-4">¿Necesitas encender el regio?</p>
+              
+              <div class="button-container">
+                <button
+                type="button"
+                class="btn btn-success"
+                data-container="body"
+                data-toggle="popover"
+                data-placement="bottom"
+                data-content="El reguio esta activado."
+                (click)="updateValue(true)"
+              >
+                Encender
+              </button>
+        
+              <button
+                type="button"
+                class="btn btn-danger"
+                data-container="body"
+                data-toggle="popover"
+                data-placement="bottom"
+                data-content="El reguio esta desactivado."
+                (click)="updateValue(false)"
+              >
+                Apagar
+              </button>
+              </div>
+              <br>
+<!-- quiero que salga aqui un boton que diga siguiente grafico -->
+<div class="btn-group" role="group" aria-label="Controles de Gráfico">
+  <a href="../graficos/" class="btn btn-primary mx-2">Anterior Gráfico</a>
+  <a href="../graficos3/" class="btn btn-primary mx-2">Siguiente Gráfico</a>
+</div>
+
+              <p class="fs-4">
+                Graficos estadisticos del nodo 1 ubicado al norte de los
+                Sembrios
+              </p>
+              <div class="album py-5 bg-light">
+                <div class="container">
+                  <apx-chart
+                    [series]="chartOptions.series"
+                    [chart]="chartOptions.chart"
+                    [xaxis]="chartOptions.xaxis"
+                    [dataLabels]="chartOptions.dataLabels"
+                    [markers]="chartOptions.markers"
+                    [tooltip]="chartOptions.tooltip"
+                    [grid]="chartOptions.grid"
+                    [title]="chartOptions.title"
+                    [legend]="chartOptions.legend"
+                  ></apx-chart>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+  </body>
+</html>
